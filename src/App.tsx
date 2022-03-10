@@ -13,7 +13,7 @@ import {FormatVacations} from './utils/FormatVacations';
 import {calculateSum} from './utils/CalculateSum';
 import MainRows from './components/MainRows';
 import {FormatPersonsAndContracts} from './utils/FormatPersonsAndContracts';
-import {DropHere} from "./components/DropHere";
+import {DropHere} from "./components/style/DropHere";
 
 function App() {
     const [selectedFile, setSelectedFile] = useState();
@@ -110,4 +110,5 @@ const TableWrapper = styled.table`
     width: 1024px;
     margin: 0 auto;
 `;
+
 export default App;

@@ -1,9 +1,10 @@
 import React from 'react';
 import { IContract, IPerson, IVacations } from '../@types/types';
 import Person from './Person';
-import { ContractBlock } from './ContractBlock';
 import DatesFunc from './DatesFunc';
 import HoursAndDollars from './HoursAndDollars';
+import styled from "styled-components";
+
 interface Props {
     personsAndContracts: IPerson[];
     vacations: IVacations;
@@ -15,7 +16,6 @@ const MainRows: React.FC<Props> = ({ personsAndContracts, vacations }) => {
             {personsAndContracts.map((item) => {
                 return item.contracts.map(
                     (contract: IContract, index: number) => {
-                        const contractNum = index;
                         return (
                             <tr key={index}>
                                 <Person index={index} item={item} />
@@ -29,7 +29,6 @@ const MainRows: React.FC<Props> = ({ personsAndContracts, vacations }) => {
                                         item.adminId,
                                         vacations,
                                         index,
-                                        contractNum
                                     )
                                 )}
                                 <td
@@ -59,5 +58,19 @@ const MainRows: React.FC<Props> = ({ personsAndContracts, vacations }) => {
         </>
     );
 };
+
+const ContractBlock = styled.td`
+    width: 184px;
+    div {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 15px 12px;
+        width: 160px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        text-align: start;
+    }
+`;
 
 export default MainRows;

@@ -1,4 +1,4 @@
-import { NameBlock } from './Name';
+import { NameBlock } from './style/Name';
 import TotalForTheWeek from './TotalForTheWeek';
 import React from 'react';
 import HoursAndDollars from './HoursAndDollars';

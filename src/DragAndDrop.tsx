@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {DropHere} from "./components/DropHere";
+import {DropHere} from "./components/style/DropHere";
 
 type IProps = Record<string, unknown>;
 class DragAndDrop extends Component<IProps, { drag: boolean }> {

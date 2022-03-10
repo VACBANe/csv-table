@@ -9,7 +9,6 @@ const DatesFunc = (
     personId: string,
     vacations: IVacations,
     index: number,
-    contractNum: number
 ) => {
     const element = contract.dates.find((item) => item.date === day);
     let isHoliday = false;
@@ -69,7 +68,7 @@ const DatesFunc = (
                     );
                 } else {
                     return element ? (
-                        <Block contract={contractNum} key={index}>
+                        <td key={index}>
                             <HoursAndDollars
                                 time={element.hours}
                                 money={element.money}
@@ -79,11 +78,11 @@ const DatesFunc = (
                             ) : (
                                 <Circle color={'red'}>{null}</Circle>
                             )}
-                        </Block>
+                        </td>
                     ) : (
-                        <Block contract={contractNum} key={index}>
+                        <td key={index}>
                             {null}
-                        </Block>
+                        </td>
                     );
                 }
             }
@@ -99,19 +98,17 @@ const DatesFunc = (
         );
     } else {
         return element ? (
-            <Block contract={contractNum} key={index}>
+            <td key={index}>
                 <HoursAndDollars time={element.hours} money={element.money} />
-            </Block>
+            </td>
         ) : (
-            <Block contract={contractNum} key={index}>
+            <td key={index}>
                 {null}
-            </Block>
+            </td>
         );
     }
 };
 
-const Block = styled.td<{ contract: number }>`
-`;
 
 const Circle = styled.div<{ color: string }>`
     width: 5px;

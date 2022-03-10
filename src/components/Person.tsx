@@ -1,4 +1,4 @@
-import { NameBlock } from './Name';
+import { NameBlock } from './style/Name';
 import React from 'react';
 import styled from 'styled-components';
 import {IPerson} from "../@types/types";
