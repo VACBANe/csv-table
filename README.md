@@ -1,3 +1,20 @@
-# Develop and Publish a React Component with ESBuild and TypeScript
 
-Example code repo for a Medium article located here:
+# CSV Table
+## Available Scripts
+In the project directory, you can run:
+
+### Adding users
+To add a user to the database, you need to add information to the src/users.scv
+Format: id, adminId, name, avatar-src
+
+### Install modules
+npm install
+
+### `npm run start`
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
